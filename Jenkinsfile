@@ -14,7 +14,7 @@ pipeline {
             steps {
                 sh 'cd linktoworld'
                 sh 'pwd'
-                sh 'cd linktoworld && terraform init && terraform plan && terraform apply -auto-approve && terraform destroy -auto-approve'
+                sh 'cd linktoworld && terraform init && terraform plan && terraform apply -auto-approve'
             }
         }
         
