@@ -5,7 +5,7 @@ pipeline {
         stage('Clone Git') {
             steps {
                 sh 'rm -Rf linktoworld'
-                sh 'git clone -b "tc001" "https://${MY_TOKEN}@github.com/SUSIGUGH/linktoworld.git"'
+                sh 'git clone -b "dev" "https://${MY_TOKEN}@github.com/SUSIGUGH/linktoworld.git"'
                 sh 'ls -ltr'
             }
         }
