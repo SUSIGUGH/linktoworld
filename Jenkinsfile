@@ -5,7 +5,7 @@ pipeline {
         stage('Clone Git') {
             steps {
                 sh 'rm -Rf linktoworld'
-                sh 'mkdir terraform'
+              //  sh 'mkdir terraform'
                 sh 'git clone -b "dev" "https://${MY_TOKEN}@github.com/SUSIGUGH/linktoworld.git"'
                 sh 'ls -ltr'
                 sh 'mv linktoworld/*.tf terraform/'
