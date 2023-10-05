@@ -8,7 +8,7 @@ pipeline {
               //  sh 'mkdir terraform'
                 sh 'git clone -b "dev" "https://${MY_TOKEN}@github.com/SUSIGUGH/linktoworld.git"'
                 sh 'ls -ltr'
-                'mv linktoworld/*.tf terraform/'
+                sh 'mv linktoworld/*.tf terraform/'
             }
         }
         
