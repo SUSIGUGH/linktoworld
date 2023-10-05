@@ -8,7 +8,7 @@ pipeline {
               //  sh 'mkdir terraform'
                 sh 'git clone -b "dev" "https://${MY_TOKEN}@github.com/SUSIGUGH/linktoworld.git"'
                 sh 'ls -ltr'
-                //sh 'mv linktoworld/*.tf terraform/'
+                'mv linktoworld/*.tf terraform/'
             }
         }
         
@@ -16,7 +16,7 @@ pipeline {
             steps {
                 sh 'cd linktoworld'
                 sh 'pwd'
-                sh 'cd terraform && terraform destroy -auto-approve && terraform init && terraform plan && terraform apply -auto-approve && terraform destroy -auto-approve '
+                sh 'cd terraform && terraform init && terraform plan && terraform apply -auto-approve'
             }
         }
         
