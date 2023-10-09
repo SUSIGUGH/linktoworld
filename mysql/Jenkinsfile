@@ -14,6 +14,12 @@ pipeline {
                 sh 'ls -ltr linktoworld/container/'
             }
         }
+      stage('Docker Buuld') {
+            steps {
+                  sh 'cd linktoworld/container/ && docker build -t mysql .'
+            }
+           }
+
         
         
     }
