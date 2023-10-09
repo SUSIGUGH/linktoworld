@@ -10,7 +10,7 @@ pipeline {
                 sh 'git clone -b "devdoku" "https://${MY_TOKEN}@github.com/SUSIGUGH/linktoworld.git"'
                 sh 'ls -ltr'
                 sh 'mkdir linktoworld/container'
-                sh 'mv linktoworld/mysql/* container/'
+                sh 'mv linktoworld/mysql/* linktoworld/container/'
                 sh 'ls -ltr linktoworld/container/'
             }
         }
