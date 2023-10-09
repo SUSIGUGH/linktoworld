@@ -5,20 +5,16 @@ pipeline {
         stage('Clone Git') {
             steps {
                 sh 'rm -Rf linktoworld'
+                sh 'rm -Rf linktoworld/container'
               //  sh 'mkdir terraform'
-                sh 'git clone -b "dev" "https://${MY_TOKEN}@github.com/SUSIGUGH/linktoworld.git"'
+                sh 'git clone -b "devdoku" "https://${MY_TOKEN}@github.com/SUSIGUGH/linktoworld.git"'
                 sh 'ls -ltr'
-                sh 'mv linktoworld/*.tf terraform/'
+                sh 'mkdir linktoworld/container'
+                sh 'mv linktoworld/* container'
+                sh 'ls -ltr linktoworld/container'
             }
         }
         
-        stage('Terraform Initialization') {
-            steps {
-                sh 'cd linktoworld'
-                sh 'pwd'
-                sh 'cd terraform && terraform init && terraform plan && terraform apply -auto-approve'
-            }
-        }
         
     }
 }
