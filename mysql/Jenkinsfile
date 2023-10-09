@@ -11,7 +11,7 @@ pipeline {
                 sh 'ls -ltr'
                 sh 'mkdir linktoworld/container'
                 sh 'mv linktoworld/mysql container/'
-                sh 'ls -ltr linktoworld/container'
+                sh 'ls -ltr linktoworld/container/mysql/'
             }
         }
         
