@@ -16,12 +16,12 @@ pipeline {
         }
       stage('Docker Build') {
             steps {
-                  sh 'cd linktoworld/container/ && sudo docker build -t mysql .'
+                  sh 'cd linktoworld/container/ && sudo docker build -t mysqlsusi01 .'
             }
            }
       stage('Docker Image Tag') {
             steps {
-                  sh 'sudo docker image tag mysql susigugh/mysql:v1'
+                  sh 'sudo docker image tag mysqlsusi01 susigugh/mysqlsusi01:v1'
                   sh 'sudo docker image list'
             }
            }
