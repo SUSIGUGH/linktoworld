@@ -27,7 +27,7 @@ pipeline {
            }
              stage('Docker Push to Repo - Docker Hub') {
             steps {
-                  sh 'sudo docker login -u${docker_user} -p${docker_password} && sudo docker push susigugh/mysql:v1'
+                  sh 'sudo docker login -u${docker_user} -p${docker_password} && sudo docker push susigugh/mysqlsusi01:v1'
             }
            } 
         
