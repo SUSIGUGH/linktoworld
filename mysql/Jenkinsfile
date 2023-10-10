@@ -21,13 +21,13 @@ pipeline {
            }
       stage('Docker Image Tag') {
             steps {
-                  sh 'sudo docker image tag mysqlsusi01 susigugh/mysqlsusi01:v1'
+                  sh 'sudo docker image tag mysqlsusi01 docker.io/susigugh/mysqlsusi01:v1'
                   sh 'sudo docker image list'
             }
            }
              stage('Docker Push to Repo - Docker Hub') {
             steps {
-                  sh 'sudo docker login -u${docker_user} -p${docker_password} && sudo docker push susigugh/mysqlsusi01:v1'
+                  sh 'sudo docker login -u${docker_user} -p${docker_password} && sudo docker push docker.io/susigugh/mysqlsusi01:v1'
             }
            } 
         
