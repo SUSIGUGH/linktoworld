@@ -14,12 +14,17 @@ pipeline {
                 sh 'ls -ltr linktoworld/container/'
             }
         }
-      stage('Docker Buuld') {
+      stage('Docker Build') {
             steps {
                   sh 'cd linktoworld/container/ && sudo docker build -t mysql .'
             }
            }
-
+      stage('Docker Image Tag') {
+            steps {
+                  sh 'sudo docker image tag mysql susigugh/mysql:v1'
+                  sh 'sudo docker image list'
+            }
+           }
         
         
     }
