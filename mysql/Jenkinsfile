@@ -16,7 +16,7 @@ pipeline {
         }
       stage('Docker Buuld') {
             steps {
-                  sh 'cd linktoworld/container/ && docker build -t mysql .'
+                  sh 'cd linktoworld/container/ && sudo docker build -t mysql .'
             }
            }
 
